@@ -5,11 +5,13 @@ import styled from 'styled-components';
 import ContentBox from './ContentBox';
 
 const ContributorContainer = styled.div`
-    width: 880px;
-    height: 95px;
+    width: 100%;
+    height: auto;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
 `;
 
 const ResultContributor = () => {

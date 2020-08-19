@@ -2,13 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentBoxField = styled.div`
-    width: 200px;
-    height: 95px;
     background-color: #EEEDFC;
-    float: left;
-    margin: 0 10px;
-    padding: 0;
     color: #5A5A5A;
+    width: 20%;
+    height: 95px;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 50px;
+
+    @media screen and (max-width: 1000px) {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 90%;
+    }
 `;
 
 const BoxTitle = styled.div`

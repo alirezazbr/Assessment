@@ -8,45 +8,48 @@ body {
   /* RESET STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   
-  .chart-skills {
+  .chart-skills-inner {
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
   }
   
-  .chart-skills *,
-  .chart-skills::before {
+  .chart-skills-inner *,
+  .chart-skills-inner::before {
     box-sizing: border-box;
   }
   
   
-  /* CHART-SKILLS STYLES
+  /* CHART-SKILLS-INNER STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   
-  .chart-skills {
-    position: relative;
-    width: 350px;
-    height: 175px;
+  .chart-skills-inner {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 71%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
   }
   
-  .chart-skills::before,
-  .chart-skills::after {
+  .chart-skills-inner::before,
+  .chart-skills-inner::after {
     position: absolute;
   }
   
-  .chart-skills::before {
+  .chart-skills-inner::before {
     content: '';
     width: inherit;
     height: inherit;
-    border: 45px solid rgba(211, 211, 211, .3);
+    border: 29px solid rgba(211, 211, 211, .3);
     border-bottom: none;
     border-top-left-radius: 175px;
     border-top-right-radius: 175px;
   }
   
-  .chart-skills::after {
-    content: 'Top Skills';
+  .chart-skills-inner::after {
+    content: '';
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
@@ -55,13 +58,13 @@ body {
     color: cadetblue;
   }
   
-  .chart-skills li {
+  .chart-skills-inner li {
     position: absolute;
     top: 100%;
     left: 0;
     width: inherit;
     height: inherit;
-    border: 45px solid;
+    border: 29px solid;
     border-top: none;
     border-bottom-left-radius: 175px;
     border-bottom-right-radius: 175px;
@@ -73,47 +76,47 @@ body {
     animation-timing-function: linear;
   }
   
-  .chart-skills li:nth-child(1) {
+  /* .chart-skills-inner li:nth-child(1) {
     z-index: 4;
     border-color: #FF5353;
     animation-name: rotate-one;
   }
   
-  .chart-skills li:nth-child(2) {
+  .chart-skills-inner li:nth-child(2) {
     z-index: 3;
     border-color: #FED403;
     animation-name: rotate-two;
     animation-delay: .4s;
   }
   
-  .chart-skills li:nth-child(3) {
+  .chart-skills-inner li:nth-child(3) {
     z-index: 2;
     border-color: #B0ACF7;
     animation-name: rotate-three;
     animation-delay: .8s;
-  }
+  } */
   
-  .chart-skills span {
+  .chart-skills-inner span {
     position: absolute;
     font-size: .85rem;
     backface-visibility: hidden;
     animation: fade-in .4s linear forwards;
   }
   
-  .chart-skills li:nth-child(1) span {
+  .chart-skills-inner li:nth-child(1) span {
     top: 5px;
     left: 10px;
     transform: rotate(-21.6deg);
   }
   
-  .chart-skills li:nth-child(2) span {
+  .chart-skills-inner li:nth-child(2) span {
     top: 20px;
     left: 10px;
     transform: rotate(-79.2deg);
     animation-delay: .4s;
   }
   
-  .chart-skills li:nth-child(3) span {
+  .chart-skills-inner li:nth-child(3) span {
     top: 18px;
     left: 10px;
     transform: rotate(-140.4deg);

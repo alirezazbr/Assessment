@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import './SatisfactionLevel.css';
+import './assets/SatisfactionLevel.css';
+import './assets/SatisfactionLevelInner.css';
+import './assets/SatisfactionLevelOuter.css';
+import './assets/SatisfactionLevelTrigger.css';
 
 const SemicircularContainer = styled.div`
     width: 350px;
@@ -10,55 +13,22 @@ const SemicircularContainer = styled.div`
     transform: translateX(-50%);
 `;
 
-// const SemicircularOuter = styled.div`
-//     width: 350px;
-//     height: 175px;
-//     background-color: #FED403;
-//     border-top-left-radius: 185px;
-//     border-top-right-radius: 185px;
-//     border: 10px solid #F0F0F0;
-//     border-bottom: 0;
-// `;
-
-// const SemicircularMiddle = styled.div`
-//     width: 228px;
-//     height: 116px;
-//     background-color: #F0F0F0;
-//     border-top-left-radius: 200px;
-//     border-top-right-radius: 200px;
-//     border: 19px solid white;
-//     border-bottom: 0;
-//     position: relative;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     top: 40px;
-// `;
-
-// const SemicircularInner = styled.div`
-//     width: 180px;
-//     height: 93px;
-//     background-color: white;
-//     border-top-left-radius: 200px;
-//     border-top-right-radius: 200px;
-//     border-bottom: 0;
-//     position: relative;
-//     left: 50%;
-//     top: 23px;
-//     transform: translateX(-50%);
-// `;
-
-
 const SatisfactionLevel = () => {
     return (
         <SemicircularContainer>
-            {/* <SemicircularOuter>
-                <SemicircularMiddle>
-                    <SemicircularInner></SemicircularInner>
-                </SemicircularMiddle>
-            </SemicircularOuter> */}
+            <ul class="chart-skills-outer" />
+
             <ul class="chart-skills">
                 <li />
                 <li />
+                <li />
+            </ul>
+
+            <ul class="chart-skills-inner">
+                <li />
+            </ul>
+
+            <ul class="chart-skills-trigger">
                 <li />
             </ul>
         </SemicircularContainer>

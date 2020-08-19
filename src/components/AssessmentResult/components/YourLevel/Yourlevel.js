@@ -11,7 +11,7 @@ const LevelContainer = styled.div`
 const LevelTitle = styled.div`
     width: 100%;
     height: 50px;
-    text-align: right:
+    text-align: right;
 `;
 
 const TitleContent = styled.p`
@@ -20,6 +20,7 @@ const TitleContent = styled.p`
     font-size: 20px;
     text-align: right;
     color: blue;
+    margin-right: 20px;
 `;
 
 const TitleContentEn = styled.span`

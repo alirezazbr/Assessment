@@ -1,0 +1,153 @@
+body {
+    font: normal 16px/1.5 'Roboto', sans-serif;
+    padding: 130px 0 0 0;
+    background: #f1f1f1;
+  }
+  
+  
+  /* RESET STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .chart-skills-outer {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .chart-skills-outer *,
+  .chart-skills-outer::before {
+    box-sizing: border-box;
+  }
+  
+  
+  /* CHART-SKILLS-INNER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .chart-skills-outer {
+    position: absolute;
+    width: 372px;
+    height: 186px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  
+  .chart-skills-outer::before,
+  .chart-skills-outer::after {
+    position: absolute;
+  }
+  
+  .chart-skills-outer::before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: 11px solid rgba(211, 211, 211, .3);
+    border-bottom: none;
+    border-top-left-radius: 184px;
+    border-top-right-radius: 184px;
+  }
+  
+  .chart-skills-outer::after {
+    content: '';
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: cadetblue;
+  }
+  
+  .chart-skills-outer li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 29px solid;
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+  }
+  
+  .chart-skills-outer span {
+    position: absolute;
+    font-size: .85rem;
+    backface-visibility: hidden;
+    animation: fade-in .4s linear forwards;
+  }
+  
+  .chart-skills-outer li:nth-child(1) span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-21.6deg);
+  }
+  
+  .chart-skills-outer li:nth-child(2) span {
+    top: 20px;
+    left: 10px;
+    transform: rotate(-79.2deg);
+    animation-delay: .4s;
+  }
+  
+  .chart-skills-outer li:nth-child(3) span {
+    top: 18px;
+    left: 10px;
+    transform: rotate(-140.4deg);
+    animation-delay: .8s;
+  }
+  
+  /* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  @keyframes rotate-one {
+    100% {
+      transform: rotate(39.6deg);
+      /**
+       * 12% => 21.6deg
+       */
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotate(39.6deg);
+    }
+    100% {
+      transform: rotate(139.2deg);
+      /**
+       * 32% => 57.6deg 
+       * 57.6 + 21.6 => 79.2deg
+       */
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotate(139.2deg);
+    }
+    100% {
+      transform: rotate(179.4deg);
+      /**
+       * 34% => 61.2deg 
+       * 61.2 + 79.2 => 140.4deg
+       */
+    }
+  }
+  
+  
+  @keyframes fade-in {
+    0%,
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
